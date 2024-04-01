@@ -15,7 +15,9 @@ async function clearTask(userId, taskId, bearerToken) {
       data.user.points
     );
   } catch (error) {
-    console.log('Error in Clear Task: ' + error.response.data.message);
+    console.log(
+      `Error in Clear Task with ID ${taskId}: ` + error.response.data.message
+    );
   }
 }
 
